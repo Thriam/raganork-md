@@ -8,6 +8,7 @@ let a = MODE == 'public' ? false : true;
 let ffmpeg = require('fluent-ffmpeg');
 const h = require('heroku-client');
 const he = new h({token: HEROKU.API_KEY});
+const axios = require('axios');
 let ur = '/apps/' + HEROKU.APP_NAME;
 Module({pattern: 'take ?(.*)', fromMe: a, desc:'Changes sticker/audio pack & author name. Title, artist, thumbnail etc.'}, (async (m, match) => { 
 if (!m.reply_message.data.quotedMessage) return await m.sendMessage('_Reply to an audio or a sticker_')
@@ -69,3 +70,10 @@ await m.client.sendMessage(m.jid, {video: await webp2mp4(!TAKE_KEY?'4bc0575f8bb4
 } else return await m.client.sendMessage(m.jid,{text:'_Reply to an animated sticker!_'});
 }));
     
+Module({pattern: 'attp ?(.*)', fromMe: a, desc:'Converts text to rainbow sticker'}, (async (m, t) => { 
+if (m.reply_message) {
+var q = await saveMessage(m.reply_message);
+var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + q, { responseType: 'arraybuffer' })
+await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by Thriam bakesvar B' })
+} else return await m.client.sendMessage(m.jid,{text:'No text given'});
+}));
