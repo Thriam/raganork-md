@@ -10,7 +10,7 @@
     "env": {
         "USERNAME": {
             "description": "Username of md",
-            "required": false
+            "required": true
         },
         "HANDLERS": {
             "description": "Prefix of commands. Can be also false",
