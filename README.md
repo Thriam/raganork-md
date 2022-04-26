@@ -1,4 +1,5 @@
 # Raganork-multi-device
+<!---
 [Get QR](https://raganork-qr.herokuapp.com/api)
 
 [Get automatic Deploy url](https://heroku.com/deploy?template=https://github.com/Thriam/raganork-md)
@@ -8,7 +9,7 @@
 [Visit website](https://bit.ly/Raganork)
 
 ---
-<!---
+---!>
 <div align="center">
   
 <a href="https://raganork-qr.herokuapp.com/api"><img align="center" src="/language/replit-scan.png" alt="Scan QR" height="112" width="300" /></a>
