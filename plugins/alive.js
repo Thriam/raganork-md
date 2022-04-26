@@ -4,15 +4,16 @@ const {parseAlive} = require('./misc/misc');
 let w = MODE=='public'?false:true
 Module({pattern: 'menu', fromMe: w, desc: 'Is bot alive?'}, (async (message, match) => {
 const templateButtons = [
-  {index: 1, urlButton: {displayText: 'Github', url: 'https://github.com/souravkl11/raganork-md'}},
+  {index: 1, urlButton: {displayText: 'Github', url: 'https://github.com/Thriam'}},
   {index: 2, quickReplyButton: {displayText: 'MENU', id: 'mdmenu'}},
   {index: 3, quickReplyButton: {displayText: 'COMMANDS', id: 'mdcmd'}}
 ]
 
 const buttonMessage = {
-    text: `Hello ${message.data.pushName}, type .list for commands`,
-    footer: 'Hey',
+    text: `Hello ${message.data.pushName}, type .list or .menu for commands`,
+    footer: 'Thriam bakesvar B',
     templateButtons: templateButtons
+    image: {url: 'https://bit.ly/3rTodvQ'}
 }
 
 await message.client.sendMessage(message.jid, buttonMessage)
