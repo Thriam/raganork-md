@@ -33,3 +33,12 @@
   
 <a href="https://bit.ly/Raganork"><img src="/language/web.png" alt="Visit Website" height="112" width="300" border="0"></a>
 -->
+
+# Raganork-multi-device setup
+1. Scan the QR code from the above link.
+2. You will get Username and Password in Whatsapp after scanning and logging in.
+3. Use the deploy button and fill the Username, Password and other necessary details shown.
+4. Click deploy button at the bottom.
+5. After it shows "App successfully deployed" click "Manage app" option.
+6. Click the resources tab in the Heroku app page toggle the button to "On" position and click "Confirm button" in the worker section.
+7. Wait for few minutes and the bot will start working.
